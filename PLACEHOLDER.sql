@@ -1,0 +1,6 @@
+DO BEGIN 
+	DECLARE my_query VARCHAR(6000);
+	DECLARE my_value INT = 2;
+	my_query = 'SELECT * FROM EXT.TB_SUCURSAL_WKF WHERE ID_SUCURSAL = ?';
+	EXECUTE IMMEDIATE my_query USING my_value;
+END
